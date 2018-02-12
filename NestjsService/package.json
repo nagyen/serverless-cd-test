@@ -1,0 +1,35 @@
+{
+  "name": "nestjsservice",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "main": "handler.js",
+  "scripts": {
+    "start": "node ./dev-server",
+    "pre-prod": "rm -rf dist && npm install && webpack"
+  },
+  "dependencies": {
+    "@nestjs/common": "^4.5.9",
+    "@nestjs/core": "^4.5.10",
+    "@nestjs/microservices": "^4.5.8",
+    "@nestjs/testing": "^4.5.5",
+    "@nestjs/websockets": "^4.5.8",
+    "redis": "^2.7.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "aws-serverless-express": "^3.1.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "0.0.22",
+    "@types/node": "^8.0.57",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.6.2",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0",
+    "nodemon": "^1.14.1",
+    "ts-node": "^4.1.0"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}

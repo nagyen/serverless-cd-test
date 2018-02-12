@@ -1,0 +1,27 @@
+service:
+  name: NestJsService
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+package: # Optional deployment packaging configuration
+  exclude: # Specify the directories and files which should be excluded in the deployment package
+    - src/**
+    - "*.js"
+    - "*.json"
+  include: # Specify the directories and files which should be included in the deployment package
+    
+functions:
+  nestjs:
+    handler: dist/lambda.nestjs
+    events:
+      - http:
+          method: get
+          path: nestjs
+  getposts:
+    handler: dist/lambda.getposts
+    events:
+      - http:
+          method: get
+          path: getposts
